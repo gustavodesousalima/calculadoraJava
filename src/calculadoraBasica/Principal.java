@@ -1,8 +1,10 @@
+package calculadoraBasica;
 import java.util.Scanner;
 
-public class Principal extends Operacoes {
+public class Principal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Calculadora op = new Calculadora();
         double numero1;
         double numero2;
         double resultado;
@@ -21,16 +23,16 @@ public class Principal extends Operacoes {
             numero2 = scanner.nextDouble();
 
             if (operacao == '+') {
-                resultado = Operacoes.somar(numero1, numero2);
+                resultado = op.somar(numero1, numero2);
                 System.out.println("Resultado: " + resultado);
             } else if (operacao == '-') {
-                resultado = Operacoes.subtrair(numero1, numero2);
+                resultado = op.subtrair(numero1, numero2);
                 System.out.println("Resultado: " + resultado);
             } else if (operacao == '*') {
-                resultado = Operacoes.multiplicar(numero1, numero2);
+                resultado = op.multiplicar(numero1, numero2);
                 System.out.println("Resultado: " + resultado);
             } else if (operacao == '/') {
-                resultado = Operacoes.dividir(numero1, numero2);
+                resultado = op.dividir(numero1, numero2);
                 System.out.println("resultado: " + resultado);
             } else {
                 System.out.println("Operação inválida!");
